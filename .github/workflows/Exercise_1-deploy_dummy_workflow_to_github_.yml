@@ -1,0 +1,14 @@
+name: 🧪 Exercise 1 - Dummy Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: 🚀 Deploy to DEVELOPMENT
+    runs-on: ubuntu-latest
+    environment: dev
+
+    steps:
+      - name: 🏁 Start Deployment
+        run: echo "deploy to ${{ github.environment }}"
