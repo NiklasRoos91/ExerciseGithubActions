@@ -1,0 +1,16 @@
+name: 🧪 Exercise 3 - Deploy with repo variable
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy with variable
+    runs-on: ubuntu-latest
+    environment: dev
+
+    steps:
+      - name: 🧱 Deploy Service Name
+        shell: bash
+        run: |
+          echo "deploying: ${{ vars.SERVICE_NAME }}"
